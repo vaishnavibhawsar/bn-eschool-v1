@@ -1,0 +1,65 @@
+<div class="bg-image d-flex justify-content-center align-items-center"
+style="
+  background-image: url('https://wallpaperaccess.com/full/1426875.jpg');
+  height: 100vh;
+">
+
+<div class="container">
+  <div class="mt-1 mb-2">
+    <img src="https://th.bing.com/th/id/R.1b8b8499f1cf14270537011451e74ec4?rik=oDjS1bsnsQfNOA&riu=http%3a%2f%2feschool.msu.ac.th%2fapp%2fimg%2flogoeschool.png&ehk=nqS%2fPb6MTfTu1coUReKElPXWeRe195zIX8dYXk9fQ6Y%3d&risl=&pid=ImgRaw&r=0"  width="70" height="80">
+    <button type="button" style = "float: right;" class="btn btn-outline-success"><a href="teacherpage">back</a></button>
+  </div>
+    <div class="row">
+        <!-- show form -->
+        <div class="col md-1 mt-4">
+           <h4 class="text-primary">Upload Assignment and Result</h4>
+           <div class="card border-0 shadow">
+               <div class="card-body">
+                 <div>
+                    <input type="file" class="text-nowrap text-truncate file" (change)="selectFile($event)">
+                    <button type="button" class="btn btn-outline-warning" [disabled] = "!selectedFiles" (click)="uploadFile()">Upload</button>
+                </div>
+    
+                <div class="progress mt-2">
+                    <div class="progress-bar progress-bar-info"
+                        role="progressbar" attr.aria-valuenow="{{percentage}}"
+                        aria-valuemin="0" aria-valuemax="100" [ngStyle]="{ width: percentage + '%' }">
+                        {{percentage}}%
+                    </div>
+                </div>
+               </div>
+           </div>
+
+
+       
+        <!-- display all files -->
+        <div class="col md-8">
+
+            <div class="mb-3 mt-3">
+                <h4 class="text-primary">File list</h4>
+            </div>
+
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">File name</th>
+                    <th scope="col">File size</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let file of listOfFiles">
+                    <th>{{file.name}}</th>
+                    <td>{{file.size}}</td>
+                    <td>
+                        <a href="{{file.url}}" class="btn btn-outline-info" type="button" download>Download</a>
+                        <a class="btn btn-outline-danger ms-2" type="button" (click)= "deleteFile(file)">Delete</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div> 
+    </div>
+</div>
+</div>

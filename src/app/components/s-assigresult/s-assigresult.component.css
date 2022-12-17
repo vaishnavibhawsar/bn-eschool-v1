@@ -1,0 +1,12 @@
+div.container{
+    float:left;
+    width:100%;
+    padding-left:10px;
+    margin-top:3px;
+    min-height:700px;
+    margin-bottom:20px;  
+
+}
+hr.style1{
+	border-top: 1px solid #8c8b8b;
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bn-eschool-firebase": {
+      "hosting": {
+        "bn-eschool": [
+          "bn-eschool-firebase"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bn-eschool-firebase"
+  }
+}

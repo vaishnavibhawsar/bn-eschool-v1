@@ -1,0 +1,50 @@
+<div  class="bg-image d-flex justify-content-center align-items-center"
+style="
+  background-image: url('https://wallpaperaccess.com/full/1426875.jpg');
+  height: 100vh;
+">
+
+<div class="container-fluid" >
+    <div class="row mt-2">
+        <div class="col" ></div>
+        
+        <div class="col-4">
+            <div class="card shadow" style="background-color: rgb(218, 239, 239);">
+                <div class="card-body">
+                    <form>
+                        <div class="mb-4">
+                             <div class ="container-fluid " style="text-align:center">
+                              <img src="https://th.bing.com/th/id/R.1b8b8499f1cf14270537011451e74ec4?rik=oDjS1bsnsQfNOA&riu=http%3a%2f%2feschool.msu.ac.th%2fapp%2fimg%2flogoeschool.png&ehk=nqS%2fPb6MTfTu1coUReKElPXWeRe195zIX8dYXk9fQ6Y%3d&risl=&pid=ImgRaw&r=0"  width="70" height="80">
+                              </div>
+                            <h4 class="text-dark text-center text-muted">Login</h4>
+                        </div>
+                        <div class="mb-2">
+                          <label for="exampleInputEmail1" class="form-label">Email</label>
+                          <input type="email" class="form-control" name="email" [(ngModel)]="email">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="password" class="form-control" name="password" [(ngModel)]="password">
+                        </div>
+                        <button type="button" class="btn btn-info" (click)="login()">Login</button>
+                        <!-- <div class="row">
+                            <div class="col-md-6">
+                                <a href="/register" style="text-decoration: none;">Need Account ? <span class="text-danger">Register</span></a>
+                            </div>
+                        -->
+                           <div class ="row"> 
+                            <div class="col-md-">
+                                <a href="/forgetpass" class="text-danger text-center" style="text-decoration: none;"> Forgot Password ? </a>
+                            </div>
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+      <div class="col"></div>
+    </div>
+</div>
+</div>

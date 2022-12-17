@@ -1,0 +1,47 @@
+<div class="bg-image d-flex justify-content-center align-items-center"
+style="
+  background-image: url('https://wallpaperaccess.com/full/1426875.jpg');
+  height: 100vh;
+">
+<div class="container">
+
+
+<div class="mb-5">
+    <div class="mb-18 mt-5">
+      <div class="container">
+        <div class="mt-1 mb-2">
+    <img src="https://th.bing.com/th/id/R.1b8b8499f1cf14270537011451e74ec4?rik=oDjS1bsnsQfNOA&riu=http%3a%2f%2feschool.msu.ac.th%2fapp%2fimg%2flogoeschool.png&ehk=nqS%2fPb6MTfTu1coUReKElPXWeRe195zIX8dYXk9fQ6Y%3d&risl=&pid=ImgRaw&r=0"  width="70" height="80">
+    <button type="button" style = "float: right;" class="btn btn-outline-success"><a href="studentpage">back</a></button>
+  </div>
+           <div class="col-md-13 mt-5">
+
+    <div class="mb-4 mt-5">
+        <h4 class="text-danger">Timetable Files</h4>
+        <hr class="style1">
+    </div>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">File name</th>
+            <th scope="col">File size</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let file of listOfFiles">
+            <th>{{file.name}}</th>
+            <td>{{file.size}}</td>
+            <td>
+                <a href="{{file.url}}" class="btn btn-outline-info" type="button" download>Download</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

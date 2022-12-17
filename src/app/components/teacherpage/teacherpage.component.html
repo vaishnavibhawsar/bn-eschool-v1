@@ -1,0 +1,68 @@
+<div class="bg-image d-flex justify-content-center align-items-center"
+style="
+  background-image: url('https://wallpaperaccess.com/full/1426875.jpg');
+  height: 100vh;
+">
+<div class="container">
+    <nav>
+    <img src="https://th.bing.com/th/id/R.1b8b8499f1cf14270537011451e74ec4?rik=oDjS1bsnsQfNOA&riu=http%3a%2f%2feschool.msu.ac.th%2fapp%2fimg%2flogoeschool.png&ehk=nqS%2fPb6MTfTu1coUReKElPXWeRe195zIX8dYXk9fQ6Y%3d&risl=&pid=ImgRaw&r=0"  width="70" height="80">
+    <button type="button" class="btn btn-outline-success " style="float:right" (click)="logout()">logout</button>
+    </nav>
+ <div class="row">
+    <div class="col-md-4 mt-3">
+        <div class="card border-0 shadow p-3">
+           <div class="form-floating mb-3 text-center">
+               <h5 class="text-center text-danger">Upload Assignment and Result</h5>
+                    <button type="button" class="btn btn-outline-success text-center" >
+                        
+                         <a href="/a-r-file" class="text-center text-warning" >Click Here</a>
+                        
+                    </button>
+          </div>
+                 <hr class="style1">
+               <div class ="container-fluid">
+                  <div class="form-floating mb-3 text-center">
+                     <h5 class="text-center text-danger">Upload Attendance</h5>
+                     <button type="button" class="btn btn-outline-success text-center" >
+                     <a href="/attendance-file" class="text-center text-warning" >Click Here</a>
+                     </button>
+                  </div>
+              </div>
+
+      </div>
+  </div>
+
+        <div class="col-md-8 mt-2">
+            <h5 class="text-danger"> Student List</h5>
+            <div class="card p-3 shadow">
+                <div class="card-body" >
+                        <label for="search"  style="float :right  ;">#Search Here</label><br>
+                        <input type="text"  class="text-center" style="float :right"  name="search" [(ngModel)]= "search">      
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">First name</th>
+                            <th scope="col">Last name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Mobile</th>
+
+                          </tr>
+                        </thead>
+                         <tbody>
+                          <tr *ngFor="let user of usersList | filter : search"  >
+                            <ng-container *ngIf= "user.category == 'Student'" > 
+                                <td >{{user.first_name}}</td>
+                                <td >{{user.last_name}}</td>
+                                <td>{{user.email}}</td>
+                                <td>{{user.mobile}}</td>
+                            </ng-container>
+                            </tr>
+                        </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+</div>

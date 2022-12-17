@@ -1,0 +1,37 @@
+<div class="bg-image d-flex justify-content-center align-items-center"
+style="
+  background-image: url('https://wallpaperaccess.com/full/1426875.jpg');
+  height: 100vh;
+">
+<div class="container">
+    
+    <div >
+        <img src="https://th.bing.com/th/id/R.1b8b8499f1cf14270537011451e74ec4?rik=oDjS1bsnsQfNOA&riu=http%3a%2f%2feschool.msu.ac.th%2fapp%2fimg%2flogoeschool.png&ehk=nqS%2fPb6MTfTu1coUReKElPXWeRe195zIX8dYXk9fQ6Y%3d&risl=&pid=ImgRaw&r=0"  width="70" height="80">
+        <button type="button" style = "float: right ;" class="btn btn-outline-success"><a href="studentpage">back</a></button>
+    </div>
+    <div  style="width: 40%;">
+    <div class="card border-0 shadow p-3">
+        <div class="form-floating mb-3 text-center">
+               <h5 class="text-center text-danger">Enter Email</h5>
+         </div>
+          <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="mail" name="mail" [(ngModel)]="email">
+              <label for="mail">Email</label>
+          </div>
+          <button type="button" class="btn btn-outline-success" (click)="details()">Details</button>
+           
+    </div>
+  </div>
+ </div>
+
+
+<div class="container-center" style ="background-color: rgb(205, 234, 234);">
+    <h5>STUDENT DETAILS</h5>
+    <div *ngIf = "isvalid()">
+        <p>FIRST NAME : {{fname}}</p>
+        <p>LAST NAME : {{lname}}</p>
+        <p>MOBILE: {{mobile}}</p>
+        <p>EMAIL : {{mail}}</p>
+    </div>
+</div>
+</div>

@@ -1,0 +1,90 @@
+<div class="bg-image d-flex justify-content-center align-items-center"
+style="
+  background-image: url('https://wallpaperaccess.com/full/1426875.jpg');
+  height: 100vh;
+"> 
+<div class="container-fluid">               
+    <button type="button" class="btn btn-outline-success " style="float:right" (click)="logout()">logout</button>
+    <div class="row">
+        <div class="col-md-4 mt-3">
+            <div class="card border-0 shadow p-3">
+                  <div class="form-floating mb-3 text-center">
+                         <h5 class="text-center text-danger">WELCOME</h5>
+                   </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="firstName" name="firstname" [(ngModel)]="fname">
+                        <label for="firstname">First name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="lname">
+                        <label for="lastName">Last name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+                        <label for="email">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="mobile" name="mobile" [(ngModel)]="mobile">
+                        <label for="mobile">Mobile</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select class="form-select"  name ="category"  id ="category" [(ngModel)]= "category">
+                            <option value="Student">Student</option>
+                            <option value="Teacher">Teacher</option>
+                       </select>
+                        <label for="category">Category</label>
+                   </div>
+                    <button type="button" class="btn btn-outline-success" (click)="addUser()">Add User</button>
+           </div>
+        </div>
+            
+        <div class="col-md-8 mt-2">
+            <h5 class="text-danger"> User List</h5>
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">First name</th>
+                            <th scope="col">Last name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Mobile</th>
+                            <th scope = "col">Category</th>
+                             <th scope="col" class="text-center">Action</th>
+                          <!-- <th scope = "col"></th>
+                            <th scope = "col"></th> -->
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let user of usersList ">
+                            <td >{{user.first_name}}</td>
+                            <td>{{user.last_name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.mobile}}</td>
+                            <td>{{user.category}}</td>
+                            <td><button class="btn btn-outline-danger" [disabled]="user.isDisabled" (click)="disable(user)">Disable</button>
+                            <button class="btn btn-outline-success" [disabled]="!user.isDisabled" (click)="enable(user)">Enable</button>
+                             <button class="btn btn-outline-danger" (click)="deleteUser(user) ">Delete</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 mt-5">
+            <div class="card border-0 shadow p-3">
+                <div class="form-floating mb-3 tetx-center">
+                    <h5 class="text-center text-danger">Schedule Timetable</h5>
+                    <button type="button" class="btn btn-outline-success text-center" >
+                    <a href="/t-file" class="text-center text-danger " >Click Here</a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div> 
+</div>
+
